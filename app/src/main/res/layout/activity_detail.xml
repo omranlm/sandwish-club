@@ -14,6 +14,10 @@
         android:adjustViewBounds="true"
         android:contentDescription="@string/sandwich_picture_content_description"
         android:scaleType="centerCrop" />
+
+<!--
+    having the scroll view here, allows the image to be always presented and scroll the text details as long as the screen height is around 250
+-->
     <ScrollView android:layout_width="match_parent"
         android:layout_height="match_parent"
         >

@@ -29,7 +29,7 @@ public class DetailActivity extends AppCompatActivity {
 
         ImageView ingredientsIv = findViewById(R.id.image_iv);
 
-        // reference origin to text view
+        // reference origin to all views
         originTV = (TextView) findViewById(R.id.origin_tv);
 
         descriptionTV = (TextView) findViewById(R.id.description_tv);
@@ -60,6 +60,7 @@ public class DetailActivity extends AppCompatActivity {
             return;
         }
 
+        // populate function needs the sandwich object as param
         populateUI(sandwich);
         Picasso.with(this)
                 .load(sandwich.getImage())
@@ -81,7 +82,7 @@ public class DetailActivity extends AppCompatActivity {
         else
             originTV.setText("-");
 
-
+        // in case of no data, show -
         for (String s : sandwich.getAlsoKnownAs())
             also_knownTV.append(s);
         if (also_knownTV.getText().equals(""))
